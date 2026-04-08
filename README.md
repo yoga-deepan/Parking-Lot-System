@@ -13,6 +13,7 @@ A modern, full-stack web application for managing parking lot operations with re
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
+- [Deployment](#-deployment)
 - [API Documentation](#api-documentation)
 - [Pricing Logic](#pricing-logic)
 - [Future Improvements](#future-improvements)
@@ -132,6 +133,59 @@ npm run dev
 ```
 
 Frontend will run on `http://localhost:5173`
+
+## 🌐 Deployment
+
+This application is production-ready and can be deployed to the cloud!
+
+### Quick Deployment Steps
+
+1. **Database**: Deploy MySQL to Railway/PlanetScale/Aiven
+2. **Backend**: Deploy to Render (free tier available)
+3. **Frontend**: Deploy to Netlify (free tier available)
+
+### Detailed Instructions
+
+For complete step-by-step deployment instructions, see **[DEPLOYMENT-GUIDE.md](./DEPLOYMENT-GUIDE.md)**
+
+The guide covers:
+- Setting up cloud MySQL database (Railway/PlanetScale/Aiven)
+- Deploying backend to Render with environment variables
+- Deploying frontend to Netlify
+- Configuring CORS and SSL
+- Troubleshooting common issues
+- Monitoring and logs
+
+### Environment Variables
+
+**Backend** (`.env`):
+```env
+NODE_ENV=production
+PORT=5000
+DB_HOST=your-database-host
+DB_USER=your-db-user
+DB_PASSWORD=your-db-password
+DB_NAME=parking_lot
+DB_PORT=3306
+DB_SSL=true
+FRONTEND_URL=https://your-frontend.netlify.app
+```
+
+**Frontend** (`.env`):
+```env
+VITE_API_URL=https://your-backend.onrender.com/api
+```
+
+### Production Features
+
+✅ Environment-based configuration  
+✅ SSL database connections  
+✅ CORS protection  
+✅ Enhanced error handling  
+✅ Request logging  
+✅ Connection pooling  
+✅ Graceful shutdown  
+✅ Health check endpoints  
 
 ## API Documentation
 
